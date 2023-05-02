@@ -24,7 +24,7 @@ return this.nome +  this.datadeCadastro  + this.descricao + this.preco + this.im
 }
 }
 
-   const produto = new Produto('manteiga', '21/07/2000', 'bom', 'R$5')
+   const produto = new Produto('pizza', '21/07/2000', 'bom', 'R$5')
      const produtodestaque = new produtoDestaque('margarina', '21/07/2000', 'bom', 'R$5', 'margarina.jpg')
      console.log(produto.mostrarProduto())
      console.log(produtodestaque.mostrarProduto())
