@@ -26,9 +26,12 @@ class Produto {
         <img src="${this.imagemDestaque}">
         <div>${this.dataCadastro}</div>
         <div>${this.descricao}</div>
-        <div>${this.preco}</div>`;
-    }
+        <div>${this.preco}</div>`
+    };
   }
+    
+      
+    
   
   const produto2 = new Produto("Bike Porshe", "2023-05-25", "Nitro Colombiano", "50000");
   const produto3 = new Produto("Porshe Boxter 718", "2023-03-15", "Carro Esportivo", "1000000");
@@ -36,10 +39,11 @@ class Produto {
   console.log(produto.mostrarProduto());
   console.log(produto2.mostrarProduto());
   console.log(produtoDestaque.mostrarProdutoDestaque());
-  
+
+
   const produto1 = document.getElementById("lista-produtos");
   produto1.insertAdjacentHTML("afterbegin", produto.mostrarProduto());
-  
+
   const produto3Elemento = document.getElementById("lista-produtos");
   produto3Elemento.insertAdjacentHTML("afterbegin", produto3.mostrarProduto());
   
