@@ -1,3 +1,9 @@
+class MeuError extends Error {
+  constructor(message){
+    this.name = "Meu Erro";
+  }
+}
+
 class Produto {
     constructor(nome, dataCadastro, descricao, preco) {
       this.nome = nome;
@@ -6,10 +12,28 @@ class Produto {
       this.preco = preco;
     }
   
-    mostrarProduto() {
-      return this.nome + this.dataCadastro + this.descricao + this.preco;
+    mostrarProdutoPadrao() {
+      try{
+        return this.mostrarProduto
+      }catch (error){
+        console.log(error)
+      }
+      
     }
   }
+
+  mostrarProduto(){
+    if((this.nome != "") && (this.descricao != "") && (this.preco != "") && (this.dataDCadrastro != "")){
+     return` this.nome + this.dataCadastro + this.descricao + this.preco`
+     
+    }else{
+        throw new MeuError("Erro detectado")
+    }
+  }
+
+
+
+ 
   
   const produto = new Produto("Bicicleta", "2023-05-25", "Aro 29", "10000");
   console.log(produto.mostrarProduto());
@@ -30,9 +54,7 @@ class Produto {
     };
   }
     
-      
     
-  
   const produto2 = new Produto("Bike Porshe", "2023-05-25", "Nitro Colombiano", "50000");
   const produto3 = new Produto("Porshe Boxter 718", "2023-03-15", "Carro Esportivo", "1000000");
   const produtoDestaque = new ProdutoDestaque("Porshe 911", "2023-05-25", "Carro dos Sonhos", "100000", "https://autoentusiastas.com.br/ae/wp-content/uploads/2020/07/Porsche-911_Turbo_S-2021-1024-02.jpg");
