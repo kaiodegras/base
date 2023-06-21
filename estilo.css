@@ -1,3 +1,10 @@
 body {
-  background: #CCC;
+  background: #A9A9A9;
+}
+
+.ProdutoDestaque {
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  
 }
